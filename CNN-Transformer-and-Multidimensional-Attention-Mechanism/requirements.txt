@@ -1,0 +1,37 @@
+# CTMAM (CNN-Transformer + Multidimensional Attention) - Windows / Python 3.8
+# NOTE:
+# 1) 先用 conda 安装 PyTorch/CUDA：
+#    conda install -c pytorch pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.2 -y
+# 2) 然后再 pip 安装本文件中的其余依赖：
+#    pip install -r requirements_win_py38_strict.txt
+#
+# 这个文件刻意删除了原 requirements.txt 里与本项目无关/在 Win 上常见报错的依赖：
+# (tensorflow / jax / dopamine-rl / gym / spacy & en-core-web-sm / 各种 file:///tmp/build 路径依赖等)
+
+# --- Core scientific stack (Py3.8 wheels available) ---
+numpy==1.23.5
+scipy==1.10.1
+pandas==1.5.3
+scikit-learn==1.2.2
+matplotlib==3.7.5
+tqdm==4.62.1
+PyYAML==6.0.1
+
+# --- Audio / feature extraction ---
+librosa==0.8.1
+SoundFile==0.10.3.post1
+audioread==2.1.9
+resampy==0.2.2
+numba==0.56.4
+llvmlite==0.39.1
+
+# --- Training utilities (pure python / small) ---
+adabound==0.0.5
+einops==0.4.1
+torchlibrosa==0.0.9
+pytorch-model-summary==0.1.2
+torchsummary==1.5.1
+tensorboard==2.9.0
+
+# --- Optional (only if scripts import them) ---
+h5py==3.8.0
